@@ -1,5 +1,5 @@
 package main.core;
 
 public interface GreetingsMessageSender {
-	public void send(GreetingsMessage greetingsMessage);
+    public void send(GreetingsMessage greetingsMessage);
 }
