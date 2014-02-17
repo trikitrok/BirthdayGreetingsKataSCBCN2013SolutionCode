@@ -1,6 +1,12 @@
-package main.core;
+package main.application;
 
 import java.util.List;
+
+import main.core.Employee;
+import main.core.EmployeeRepository;
+import main.core.GreetingsMessage;
+import main.core.GreetingsMessageSender;
+import main.core.OurDate;
 
 public class BirthdayService {
 
@@ -18,8 +24,12 @@ public class BirthdayService {
                 .findEmployeesWhoseBirthdayIs(today);
 
         for (Employee employee : employees) {
-            GreetingsMessage greetingsMessage = new GreetingsMessage(employee);
-            greetingsMessageSender.send(greetingsMessage);
+            sendGreetingsTo(employee);
         }
+    }
+    
+    private void sendGreetingsTo(Employee employee) {
+        GreetingsMessage greetingsMessage = new GreetingsMessage(employee);
+        greetingsMessageSender.send(greetingsMessage);
     }
 }

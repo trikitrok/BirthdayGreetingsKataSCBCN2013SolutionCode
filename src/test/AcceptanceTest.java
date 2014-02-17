@@ -10,7 +10,7 @@ import javax.mail.Message;
 import org.junit.Before;
 import org.junit.Test;
 
-import main.core.BirthdayService;
+import main.application.BirthdayService;
 import main.core.EmployeeRepository;
 import main.core.OurDate;
 import main.employee_repository_adapters.FileEmployeeRepository;
